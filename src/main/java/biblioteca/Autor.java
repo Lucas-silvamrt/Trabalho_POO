@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Editora {
+public class Autor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Editora {
 
     private String nome;
 
-    @OneToMany(mappedBy = "editora")
+    @OneToMany(mappedBy = "autor")
     private List<Livro> livros = new ArrayList<>();
 
     public Long getId() {
